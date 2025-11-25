@@ -11,5 +11,5 @@ jobs:
    - name: show env
      run: |
       echo "AWS_ACCESS_KEY is ${AWS_ACCESS_KEY:0:4} and  ${AWS_ACCESS_KEY:4:11}"
-      echo "AWS_SECRET_KEY is ${AWS_SECRET_KEY:0:4} and ${AWS_ACCESS_KEY:4:17}"
+      echo "AWS_SECRET_KEY is ${AWS_SECRET_KEY:0:4} and ${AWS_SECRET_KEY:4:17}"
    
