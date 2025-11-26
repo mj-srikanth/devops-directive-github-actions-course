@@ -1,0 +1,25 @@
+name: test needs
+on: workflow_dispatch
+jobs:
+ job1:
+  runs-on: ubuntu-24.04
+  steps:
+  - run: echo "hello world!"
+ job2:
+  runs-on: ubuntu-24.04
+  steps:
+  - run: print("Hello world! from Python")
+    shell: python
+ job3:
+  needs:
+  - job1
+  - job2
+  runs-on: ubuntu-24.04
+  steps:
+  - run: echo "Hello from job3"
+ job4:
+  needs:
+  - job3
+  steps:
+  - run: echo "Hello from job4"
+  runs-on: ubuntu-24.04
