@@ -1,0 +1,18 @@
+name: "different steps types"
+on: workflow_dispatch
+jobs:
+ sthello:
+  runs-on: ubuntu-24.04
+  steps:
+   - run: echo "hello world!"
+ ndhello:
+  runs-on: ubuntu-24.04
+  steps:
+  - run: print("hello world!")
+    shell: python
+ rdhello:
+  runs-on: ubuntu-24.04
+  steps:
+  - uses: actions/hello-world-java-script-action
+    with:
+     who-to-greet: "hello world! from java script"
