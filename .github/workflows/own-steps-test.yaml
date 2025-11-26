@@ -13,6 +13,6 @@ jobs:
  rdhello:
   runs-on: ubuntu-24.04
   steps:
-  - uses: actions/hello-world-java-script-action
+  - uses: actions/hello-world-javascript-action@081a6d193d1dcb38460df1e6927486d748730f9d
     with:
      who-to-greet: "hello world! from java script"
